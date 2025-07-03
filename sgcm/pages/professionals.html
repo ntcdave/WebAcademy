@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Profissionais</title>
-    <link rel="stylesheet" href="../images/logo_branco(64).png">
+    <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
     <header>
@@ -22,53 +22,48 @@
     </nav>
     <main>
         <form action="">
-            <label for="name">Nome</label>
-            <input type="text" id="name" name="name">
-            <br>
-            <label for="crm">CRM</label>
-            <input type="text" id="crm" name="crm">
-            <br>
-            <label for="phone">Telefone</label>
-            <input type="text" id="phone" name="phone">
-            <br>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email">
-            <br>
-            <label for="unity">Unidade:</label>
-            <select name="unity" id="unity">
-                <option value="1">UPA - Segundo Distrito</option>
-                <option value="2">UPA - Cidade do Povo</option>
-                <option value="3">Pronto Socorro</option>
-            </select>
-            <br>
-            <label for="specialty">Especialidade</label>
-            <select name="specialty" id="specialty">
-                <option value="1">Cardiologista</option>
-                <option value="2">Dermatologista</option>
-                <option value="3">Endocrinologista</option>
-                <option value="4">Ginecologista</option>
-                <option value="5">Pediatra</option>
-            </select>
-            <br>
-            <input type="submit" value="Salvar">
-            <input type="reset" value="Limpar">
+            <div class="form-group">
+                <label for="name">Nome</label>
+                <input type="text" id="name" name="name" placeholder="Digite o nome completo">
+            </div>
+            <div class="form-group">
+                <label for="crm">CRM</label>
+                <input type="text" id="crm" name="crm" placeholder="Digite o número do CRM">
+            </div>
+            <div class="form-group">
+                <label for="phone">Telefone</label>
+                <input type="text" id="phone" name="phone" placeholder="(00) 00000-0000">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="email@exemplo.com">
+            </div>
+            <div class="form-group">
+                <label for="unity">Unidade</label>
+                <select name="unity" id="unity">
+                    <option value="">Selecione uma unidade</option>
+                    <option value="1">UPA - Segundo Distrito</option>
+                    <option value="2">UPA - Cidade do Povo</option>
+                    <option value="3">Pronto Socorro</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="specialty">Especialidade</label>
+                <select name="specialty" id="specialty">
+                    <option value="">Selecione uma especialidade</option>
+                    <option value="1">Cardiologista</option>
+                    <option value="2">Dermatologista</option>
+                    <option value="3">Endocrinologista</option>
+                    <option value="4">Ginecologista</option>
+                    <option value="5">Pediatra</option>
+                </select>
+            </div>
+            <div class="form-buttons">
+                <button type="submit" class="btn btn-primary">Salvar</button>
+                <button type="reset" class="btn btn-secondary">Limpar</button>
+            </div>
         </form>
         <table>
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>CRM</th>
-                    <th>Telefone</th>
-                    <th>Email</th>
-                    <th>Unidade</th>
-                    <th>Opções</th>
-                </tr>
-            </thead>
-
-        </table><table border="1">
-            <!-- tr*6>td{X}*8 
-             Gera 6 linhas com 8 colunas preenchidas com X -->
-            <!-- tr*5>td{$}+td*6{X}+td{Editar|Excluir} -->
             <thead>
                 <tr>
                     <th>ID</th>
@@ -81,57 +76,83 @@
                     <th>OPÇÕES</th>
                 </tr>
             </thead>
-            <!-- tr*5>td{$}+td*6{X}+td{<a href="">Editar</a>|<a href="">Excluir</a>} -->
-            <tr>
-                <td>1</td>
-                <td>X</td>
-                <td>X</td>
-                <td>X</td>
-                <td>X</td>
-                <td>X</td>
-                <td>X</td>
-                <td><a href="">Editar</a>|<a href="">Excluir</a></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>X</td>
-                <td>X</td>
-                <td>X</td>
-                <td>X</td>
-                <td>X</td>
-                <td>X</td>
-                <td><a href="">Editar</a>|<a href="">Excluir</a></td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>X</td>
-                <td>X</td>
-                <td>X</td>
-                <td>X</td>
-                <td>X</td>
-                <td>X</td>
-                <td><a href="">Editar</a>|<a href="">Excluir</a></td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>X</td>
-                <td>X</td>
-                <td>X</td>
-                <td>X</td>
-                <td>X</td>
-                <td>X</td>
-                <td><a href="">Editar</a>|<a href="">Excluir</a></td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>X</td>
-                <td>X</td>
-                <td>X</td>
-                <td>X</td>
-                <td>X</td>
-                <td>X</td>
-                <td><a href="">Editar</a>|<a href="">Excluir</a></td>
-            </tr>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Dr. João Silva</td>
+                    <td>CRM-12345</td>
+                    <td>(11) 99999-9999</td>
+                    <td>joao.silva@email.com</td>
+                    <td>UPA - Segundo Distrito</td>
+                    <td>Cardiologista</td>
+                    <td>
+                        <div class="action-links">
+                            <a href="#" class="edit-link">Editar</a>
+                            <a href="#" class="delete-link">Excluir</a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Dra. Maria Santos</td>
+                    <td>CRM-67890</td>
+                    <td>(11) 88888-8888</td>
+                    <td>maria.santos@email.com</td>
+                    <td>UPA - Cidade do Povo</td>
+                    <td>Dermatologista</td>
+                    <td>
+                        <div class="action-links">
+                            <a href="#" class="edit-link">Editar</a>
+                            <a href="#" class="delete-link">Excluir</a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Dr. Carlos Oliveira</td>
+                    <td>CRM-11111</td>
+                    <td>(11) 77777-7777</td>
+                    <td>carlos.oliveira@email.com</td>
+                    <td>Pronto Socorro</td>
+                    <td>Endocrinologista</td>
+                    <td>
+                        <div class="action-links">
+                            <a href="#" class="edit-link">Editar</a>
+                            <a href="#" class="delete-link">Excluir</a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Dra. Ana Costa</td>
+                    <td>CRM-22222</td>
+                    <td>(11) 66666-6666</td>
+                    <td>ana.costa@email.com</td>
+                    <td>UPA - Segundo Distrito</td>
+                    <td>Ginecologista</td>
+                    <td>
+                        <div class="action-links">
+                            <a href="#" class="edit-link">Editar</a>
+                            <a href="#" class="delete-link">Excluir</a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Dr. Pedro Lima</td>
+                    <td>CRM-33333</td>
+                    <td>(11) 55555-5555</td>
+                    <td>pedro.lima@email.com</td>
+                    <td>UPA - Cidade do Povo</td>
+                    <td>Pediatra</td>
+                    <td>
+                        <div class="action-links">
+                            <a href="#" class="edit-link">Editar</a>
+                            <a href="#" class="delete-link">Excluir</a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
             <tfoot>
                 <tr>
                     <td colspan="8">Quantidade de Profissionais: 5</td>
