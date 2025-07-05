@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatórios - SGCM</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <header>
+        <img src="../images/logo_azul(64).png" alt="Logo do SGCM">
+        <p>SGCM - Sistema de Gerenciamento de Consultas Médicas</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="professionals.html">Profissionais</a></li>
+            <li><a href="patients.html">Pacientes</a></li>
+            <li><a href="appointments.html">Consultas</a></li>
+            <li><a href="reports.html">Relatórios</a></li>
+        </ul>
+    </nav>
+    <main>
+        <!-- Reports Header -->
+        <section class="hero-section">
+            <h1>Relatórios e Estatísticas</h1>
+            <p class="hero-subtitle">Análise completa dos dados do sistema SGCM</p>
+        </section>
+
+        <!-- Quick Stats -->
+        <section class="quick-access">
+            <h2>Resumo Geral</h2>
+            <div class="access-grid">
+                <div class="access-card">
+                    <div class="access-icon">📊</div>
+                    <h3>Total de Consultas</h3>
+                    <p>324 consultas este mês</p>
+                </div>
+                <div class="access-card">
+                    <div class="access-icon">👥</div>
+                    <h3>Pacientes Atendidos</h3>
+                    <p>156 pacientes únicos</p>
+                </div>
+                <div class="access-card">
+                    <div class="access-icon">👨‍⚕️</div>
+                    <h3>Profissionais Ativos</h3>
+                    <p>5 médicos em atividade</p>
+                </div>
+                <div class="access-card">
+                    <div class="access-icon">📈</div>
+                    <h3>Taxa de Ocupação</h3>
+                    <p>87% de ocupação média</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Report Filters -->
+        <section class="features-section">
+            <h2>Filtros de Relatório</h2>
+            <form class="report-filters">
+                <div class="form-group">
+                    <label for="report-type">Tipo de Relatório</label>
+                    <select name="report-type" id="report-type">
+                        <option value="">Selecione o tipo</option>
+                        <option value="consultations">Relatório de Consultas</option>
+                        <option value="professionals">Relatório de Profissionais</option>
+                        <option value="patients">Relatório de Pacientes</option>
+                        <option value="units">Relatório por Unidade</option>
+                        <option value="specialties">Relatório por Especialidade</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date-start">Data Início</label>
+                    <input type="date" id="date-start" name="date-start">
+                </div>
+                <div class="form-group">
+                    <label for="date-end">Data Fim</label>
+                    <input type="date" id="date-end" name="date-end">
+                </div>
+                <div class="form-group">
+                    <label for="unit-filter">Unidade</label>
+                    <select name="unit-filter" id="unit-filter">
+                        <option value="">Todas as unidades</option>
+                        <option value="1">UPA - Segundo Distrito</option>
+                        <option value="2">UPA - Cidade do Povo</option>
+                        <option value="3">Pronto Socorro</option>
+                    </select>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" class="btn btn-primary">Gerar Relatório</button>
+                    <button type="reset" class="btn btn-secondary">Limpar Filtros</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Report Types -->
+        <section class="info-section">
+            <h2>Tipos de Relatórios Disponíveis</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>📋 Relatório de Consultas</h3>
+                    <p>Análise detalhada de todas as consultas realizadas, incluindo horários, duração, status e resultados. Permite identificar padrões de agendamento e eficiência do atendimento.</p>
+                    <ul>
+                        <li>Consultas por período</li>
+                        <li>Taxa de comparecimento</li>
+                        <li>Tempo médio de atendimento</li>
+                        <li>Consultas canceladas</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>👨‍⚕️ Relatório de Profissionais</h3>
+                    <p>Estatísticas de performance dos profissionais médicos, incluindo número de atendimentos, especialidades mais demandadas e distribuição de carga de trabalho.</p>
+                    <ul>
+                        <li>Atendimentos por profissional</li>
+                        <li>Especialidades mais procuradas</li>
+                        <li>Distribuição de carga</li>
+                        <li>Horários de maior demanda</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>👥 Relatório de Pacientes</h3>
+                    <p>Análise demográfica e comportamental dos pacientes, incluindo faixa etária, gênero, frequência de consultas e histórico de atendimento.</p>
+                    <ul>
+                        <li>Perfil demográfico</li>
+                        <li>Frequência de consultas</li>
+                        <li>Pacientes recorrentes</li>
+                        <li>Distribuição por região</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>🏥 Relatório por Unidade</h3>
+                    <p>Comparativo de performance entre as diferentes unidades de saúde, incluindo capacidade de atendimento, ocupação e eficiência operacional.</p>
+                    <ul>
+                        <li>Capacidade por unidade</li>
+                        <li>Taxa de ocupação</li>
+                        <li>Eficiência operacional</li>
+                        <li>Recursos disponíveis</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>🎯 Relatório por Especialidade</h3>
+                    <p>Análise da demanda por especialidades médicas, incluindo tempo de espera, distribuição de profissionais e necessidades de expansão.</p>
+                    <ul>
+                        <li>Demanda por especialidade</li>
+                        <li>Tempo de espera médio</li>
+                        <li>Distribuição de profissionais</li>
+                        <li>Necessidades de expansão</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>📊 Relatório Financeiro</h3>
+                    <p>Análise de custos, receitas e indicadores financeiros do sistema, incluindo eficiência de recursos e planejamento orçamentário.</p>
+                    <ul>
+                        <li>Custos operacionais</li>
+                        <li>Receita por unidade</li>
+                        <li>Eficiência de recursos</li>
+                        <li>Projeções financeiras</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sample Report Table -->
+        <section class="features-section">
+            <h2>Relatório de Consultas - Últimos 30 Dias</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Profissional</th>
+                        <th>Especialidade</th>
+                        <th>Unidade</th>
+                        <th>Consultas Realizadas</th>
+                        <th>Taxa de Ocupação</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>15/01/2024</td>
+                        <td>Dr. João Silva</td>
+                        <td>Cardiologia</td>
+                        <td>UPA - Segundo Distrito</td>
+                        <td>12</td>
+                        <td>85%</td>
+                        <td>Concluído</td>
+                    </tr>
+                    <tr>
+                        <td>15/01/2024</td>
+                        <td>Dra. Maria Santos</td>
+                        <td>Dermatologia</td>
+                        <td>UPA - Cidade do Povo</td>
+                        <td>8</td>
+                        <td>67%</td>
+                        <td>Concluído</td>
+                    </tr>
+                    <tr>
+                        <td>16/01/2024</td>
+                        <td>Dr. Carlos Oliveira</td>
+                        <td>Endocrinologia</td>
+                        <td>Pronto Socorro</td>
+                        <td>15</td>
+                        <td>93%</td>
+                        <td>Concluído</td>
+                    </tr>
+                    <tr>
+                        <td>16/01/2024</td>
+                        <td>Dra. Ana Costa</td>
+                        <td>Ginecologia</td>
+                        <td>UPA - Segundo Distrito</td>
+                        <td>10</td>
+                        <td>78%</td>
+                        <td>Concluído</td>
+                    </tr>
+                    <tr>
+                        <td>17/01/2024</td>
+                        <td>Dr. Pedro Lima</td>
+                        <td>Pediatria</td>
+                        <td>UPA - Cidade do Povo</td>
+                        <td>14</td>
+                        <td>88%</td>
+                        <td>Concluído</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">Total de Consultas: 59</td>
+                        <td colspan="3">Taxa Média de Ocupação: 82%</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <!-- Export Options -->
+        <section class="quick-access">
+            <h2>Exportar Relatórios</h2>
+            <div class="access-grid">
+                <a href="#" class="access-card">
+                    <div class="access-icon">📄</div>
+                    <h3>Exportar PDF</h3>
+                    <p>Gerar relatório em formato PDF</p>
+                </a>
+                <a href="#" class="access-card">
+                    <div class="access-icon">📊</div>
+                    <h3>Exportar Excel</h3>
+                    <p>Dados em formato Excel (.xlsx)</p>
+                </a>
+                <a href="#" class="access-card">
+                    <div class="access-icon">📈</div>
+                    <h3>Gráficos</h3>
+                    <p>Visualização gráfica dos dados</p>
+                </a>
+                <a href="#" class="access-card">
+                    <div class="access-icon">📧</div>
+                    <h3>Enviar por Email</h3>
+                    <p>Enviar relatório por email</p>
+                </a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
