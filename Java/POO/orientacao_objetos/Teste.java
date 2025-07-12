@@ -3,10 +3,11 @@ public class Teste {
         System.out.println("Teste de classe Java.");
         
         // Criando uma instância da classe Pessoa
-        Java.POO.Pessoa pessoa = new Java.POO.Pessoa();
-        pessoa.nome = "João";
-        pessoa.email = "joaozinhodacidadedopovo@email.com";
-    
+        Pessoa pessoa = new Pessoa();
+        String nome = "João";
+        String email = "joao@gmail.com";
+        pessoa.setNome(nome);
+        pessoa.setEmail(email);
     
     }
-    
+}

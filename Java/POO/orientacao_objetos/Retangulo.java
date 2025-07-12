@@ -12,6 +12,11 @@ public class Retangulo extends Quadrilatero {
         return base * altura;
     }
 
+    @Override
+    public double calcularPerimetro() {
+        return 2 * (base + altura);
+    }
+
     public double getBase() {
         return base;
     }
